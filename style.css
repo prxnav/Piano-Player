@@ -1,0 +1,102 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#d85802, #c20661);
+}
+
+.piano {
+  display: flex;
+  position: relative;
+  margin-left: 4px;
+}
+
+.white {
+  max-width: 100px;
+  width: 80px;
+  height: 240px;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 0 0 6px 6px;
+  margin-left: -4px;
+  outline: none;
+  position: relative;
+}
+
+.white,
+.black {
+  transition: 0.1s linear;
+}
+
+.playing {
+  transform: scale(0.95);
+  border-color: #ff004cc0;
+  box-shadow: 0 0 1rem #ff0055ea;
+}
+
+.black {
+  position: absolute;
+  width: 48px;
+  height: 160px;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 0 0 2px 2px;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.W {
+  transform: translateX(48px);
+}
+
+.E {
+  transform: translateX(145px);
+}
+
+.T {
+  transform: translateX(300px);
+}
+
+.Y {
+  transform: translateX(380px);
+}
+
+.U {
+  transform: translateX(460px);
+}
+
+kbd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: rgb(156, 151, 151);
+  background: black;
+  font-weight: bold;
+}
+
+.white>kbd {
+  bottom: -15px;
+}
+
+.black>span {
+  color: white;
+}
+
+.black>kbd {
+  top: 0;
+}
+
+.sound {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
