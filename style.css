@@ -9,7 +9,52 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#d85802, #c20661);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation: bg-anim 20s ease-in-out;
+  background-image: linear-gradient(90deg,
+     #ee6352, 
+     purple,
+     #ee6352)
+}
+
+@keyframes bg-anim {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+.content {
+  position: fixed;
+  top: 100px;
+  background: white;
+  width: 50vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0,0,0,0.5);
+  position: fixed;
+  top: 50px;
+  border-radius: 25px;
+}
+
+
+.heading  {
+  font-size: 3rem;
+  font-family: sans-serif;
+  text-transform:uppercase;
+  font-style:italic;
+  font-weight: 900;
+  background-clip:text;
+  text-align: center;
+  padding: 0.25em;
+  color: linear-gradient(90deg, #ee6352, purple, #ee6352);
+  mix-blend-mode: multiply;
 }
 
 .piano {
@@ -100,3 +145,7 @@ kbd {
   left: 0;
   right: 0;
 }
+
+
+
+
